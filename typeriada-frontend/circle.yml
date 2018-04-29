@@ -1,7 +1,9 @@
 #####
 # Circle CI
-#
 #####
+
+general:
+  build_dir: typeriada-frontend
 
 machine:
   node:
