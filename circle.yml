@@ -1,0 +1,23 @@
+#####
+# Circle CI
+#####
+
+general:
+  build_dir: typeriada-frontend
+
+machine:
+  node:
+    version: 8.9.4
+
+dependencies:
+  pre:
+    - yarn global add aurelia-cli
+    - yarn global add nps
+  override:
+    - yarn install
+
+test:
+  override:
+    - au build
+    - au karma
+    - nps e2e
