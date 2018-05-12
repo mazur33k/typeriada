@@ -1,0 +1,105 @@
+<template>
+  <require from="./tp-navbar.scss"></require>
+  <md-navbar>
+    <a href="#/samples/navbar" class="brand-logo left">
+      <img src="./../../assets/images/soccer-field.png">
+      <span class="prefix">Typer</span><span>iada</span>
+    </a>
+    <ul class="menu hide-on-med-and-down left">
+      <li md-waves>
+        <a>
+          <span class="circle"><i class="material-icons">home</i></span>
+          <span>Strona główna</span>
+        </a>
+      </li>
+      <li md-waves>
+        <a>
+          <span class="circle"><i class="material-icons">create</i></span>
+          <span>Typowanie</span>
+        </a>
+      </li>
+      <li md-waves>
+        <a>
+          <span class="circle"><i class="material-icons">format_list_numbered</i></span>
+          <span>Tabela wyników</span>
+        </a>
+      </li>
+      <li md-waves>
+        <a>
+          <span class="circle"><i class="material-icons">assignment</i></span>
+          <span>Regulamin</span>
+        </a>
+      </li>
+    </ul>
+    <ul class="hide-on-med-and-down right account">
+      <li>
+        <a md-dropdown="activates: account-dropdown; below-origin.bind: true">
+          <i class="user material-icons left">account_circle</i>
+          Jan Kowalski
+          <i class="material-icons right">arrow_drop_down</i>
+        </a>
+      </li>
+    </ul>
+    <a md-sidenav-collapse="ref.bind: sideNav;" class="hide-on-large-only right">
+      <i class="material-icons">menu</i>
+    </a>
+  </md-navbar>
+  <ul id="account-dropdown" class="dropdown-content">
+    <li>
+      <a>
+        <i class="settings material-icons left">settings</i>
+        <span>Moje konto</span>
+      </a>
+    </li>
+    <li>
+      <a>
+        <i class="input material-icons left">input</i>
+        <span>Wyloguj</span>
+      </a>
+    </li>
+  </ul>
+  <md-sidenav view-model.ref="sideNav">
+    <div class="user-view">
+      <i class="user material-icons medium center">account_circle</i>
+      <span class="white-text name center">Jan Kowalski</span>
+      <span class="white-text email center">jankowalski@gmail.com</span>
+      <div class="logout-wrap center">
+        <button md-button>
+          <i class="left material-icons">input</i>Wyloguj
+        </button>
+      </div>
+    </div>
+    <ul>
+      <li md-waves>
+        <a>
+          <span class="circle"><i class="material-icons">home</i></span>
+          <span>Strona główna</span>
+        </a>
+      </li>
+      <li md-waves>
+        <a>
+          <span class="circle"><i class="material-icons">create</i></span>
+          <span>Typowanie</span>
+        </a>
+      </li>
+      <li md-waves>
+        <a>
+          <span class="circle"><i class="material-icons">format_list_numbered</i></span>
+          <span>Tabela wyników</span>
+        </a>
+      </li>
+      <li md-waves>
+        <a>
+          <span class="circle"><i class="material-icons">assignment</i></span>
+          <span>Regulamin</span>
+        </a>
+      </li>
+      <li md-waves>
+        <a>
+          <span class="circle"><i class="settings material-icons">settings</i></span>
+          <span>Moje konto</span>
+        </a>
+      </li>
+    </ul>
+  </md-sidenav>
+</template>
